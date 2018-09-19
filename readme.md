@@ -1,5 +1,11 @@
 # Technical assessment Domino Game
 
+First install vendor files with composer
+
+```php
+composer install
+```
+
 To run the game you can simply use the cli command
 
 ```php
