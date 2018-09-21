@@ -65,7 +65,6 @@ final class Game implements GameInterface
             if ($i % 2 == 0) {
                 $player = $this->player2;
             } else { //Otherwise player1
-
                 $player = $this->player1;
             }
 
