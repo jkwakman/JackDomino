@@ -114,7 +114,6 @@ final class DominoPool implements DominoPoolInterface
     {
 
         if ($amount <= count($this->pool)) {
-
             $this->shuffle();
 
             return array_splice($this->pool, 0, $amount);
@@ -138,7 +137,6 @@ final class DominoPool implements DominoPoolInterface
              * @var $domino Domino
              */
             if (in_array($value, $domino->getPlayableValues())) {
-
                 $domino = array_splice($this->pool, $key, 1);
 
                 //Return a single domino
@@ -180,7 +178,6 @@ final class DominoPool implements DominoPoolInterface
         foreach ($this->pool as $key => $domino) {
 
             if (in_array($value, $domino->getPlayableValues())) {
-
                 return $domino->markAsPlayed($value);
             }
         }
@@ -202,7 +199,6 @@ final class DominoPool implements DominoPoolInterface
         foreach ($domino->getPlayableValues() as $dominoValue) {
 
             if (in_array($dominoValue, $this->getPlayableValues('object'))) {
-
                 //Mark the domino in the pool as played
                 $this->markAsPlayed((int)$dominoValue);
 
@@ -226,7 +222,6 @@ final class DominoPool implements DominoPoolInterface
     {
 
         if (array_key_exists($position, $this->pool)) {
-
             return $this->pool[$position];
         }
 
@@ -248,7 +243,6 @@ final class DominoPool implements DominoPoolInterface
              * @var $domino Domino
              */
             if (in_array($value, $domino->getPlayableValues())) {
-
                 return $key;
             }
         }
