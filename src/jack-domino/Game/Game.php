@@ -61,7 +61,6 @@ final class Game implements GameInterface
 
         //Make a loop over the full set..
         for ($i = 0; $i <= count(DominoPool::FULL_SET); $i++) {
-
             //Even for player2
             if ($i % 2 == 0) {
                 $player = $this->player2;
@@ -81,7 +80,6 @@ final class Game implements GameInterface
                 echo PHP_EOL . 'Game is blocked. Stack is empty';
                 break;
             }
-
         }
     }
 
@@ -97,13 +95,11 @@ final class Game implements GameInterface
         $played = false;
 
         while (!$played) {
-
             //Do we have matching available values?
             $matchingValues = array_intersect($this->board->getPlayableValues(), $player->dominoPool->getPlayableValues());
 
             if (count($matchingValues)) {
                 foreach ($matchingValues as $value) {
-
                     //Select the board domino
                     $position = $this->board->getPosition($value);
 
@@ -128,7 +124,6 @@ final class Game implements GameInterface
                     }
                 }
             } else {
-
                 //Pick a new tile
                 $newDomino = $this->getTileFromStack($this->stack);
 
