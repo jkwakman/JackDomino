@@ -31,7 +31,8 @@ final class Player implements PlayerInterface
      * @param string $name
      * @param DominoPool $dominoPool
      */
-    public function __construct(string $name, DominoPool $dominoPool) {
+    public function __construct(string $name, DominoPool $dominoPool)
+    {
 
         $this->name = $name;
         $this->dominoPool = $dominoPool;
@@ -42,7 +43,8 @@ final class Player implements PlayerInterface
      *
      * @return string
      */
-    public function __toString(): string {
+    public function __toString(): string
+    {
 
         return $this->name;
     }
@@ -52,7 +54,8 @@ final class Player implements PlayerInterface
      *
      * @return string
      */
-    public function showHand(): string {
+    public function showHand(): string
+    {
 
         return (string)$this->dominoPool;
     }
