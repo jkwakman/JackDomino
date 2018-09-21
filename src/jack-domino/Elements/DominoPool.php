@@ -233,7 +233,6 @@ final class DominoPool implements DominoPoolInterface
     {
 
         foreach ($this->pool as $key => $domino) {
-
             /**
              * @var $domino Domino
              */
