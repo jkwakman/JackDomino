@@ -81,7 +81,6 @@ final class Domino implements DominoInterface
     {
 
         foreach ($this->values as $key => $value) {
-
             if ($value->isPlayable()) {
                 if ($mode == 'object') {
                     $playableValues[] = $value;
@@ -106,7 +105,6 @@ final class Domino implements DominoInterface
 
         //Loop through the playable values
         foreach ($this->getPlayableValues(array(), 'object') as $key => $dominoValue) {
-
             if ($value == $dominoValue->getValue()) {
                 //Reverse the domino when it is in the wrong position
                 if (($position === 0 && $key == 0) || ($position > 0 && $key == 1)) {
