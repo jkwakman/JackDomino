@@ -144,7 +144,8 @@ final class Game implements GameInterface
      * @param DominoPool $stack
      * @return Domino|null
      */
-    public function getTileFromStack(DominoPool $stack): ? Domino {
+    public function getTileFromStack(DominoPool $stack): ? Domino
+    {
 
         //Pick a new tile
         $newDomino = $stack->pickRandom(1);
