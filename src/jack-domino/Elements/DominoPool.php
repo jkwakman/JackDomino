@@ -217,7 +217,7 @@ final class DominoPool implements DominoPoolInterface
     }
 
     /**
-     * Select with value (select from available pool and do not remove)
+     * Get a domino tile by position in the pool
      *
      * @param int $position
      * @return Domino|null
@@ -234,7 +234,7 @@ final class DominoPool implements DominoPoolInterface
     }
 
     /**
-     * Select with value (select from available pool and do not remove)
+     * Get position by value (only playable)
      *
      * @param int $value
      * @return int|null
