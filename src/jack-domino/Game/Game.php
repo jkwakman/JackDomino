@@ -64,7 +64,6 @@ final class Game implements GameInterface
 
             //Even for player2
             if ($i % 2 == 0) {
-
                 $player = $this->player2;
             } else { //Otherwise player1
 
@@ -76,14 +75,10 @@ final class Game implements GameInterface
 
             //Check if we have a winner
             if ($this->hasWon($player)) {
-
                 echo PHP_EOL . 'Player ' . $player . ' has won!';
-
                 break;
             } else if ($this->isBlocked($this->stack)) {
-
                 echo PHP_EOL . 'Game is blocked. Stack is empty';
-
                 break;
             }
 
@@ -107,14 +102,12 @@ final class Game implements GameInterface
             $matchingValues = array_intersect($this->board->getPlayableValues(), $player->dominoPool->getPlayableValues());
 
             if (count($matchingValues)) {
-
                 foreach ($matchingValues as $value) {
 
                     //Select the board domino
                     $position = $this->board->getPosition($value);
 
                     if (is_integer($position)) {
-
                         $boardDomino = $this->board->getDominoByPosition($position);
 
                         //Get the domino of the player
@@ -140,9 +133,7 @@ final class Game implements GameInterface
                 $newDomino = $this->getTileFromStack($this->stack);
 
                 if ($newDomino) {
-
                     echo PHP_EOL . $player . ' can\'t play, drawing tile ' . $newDomino;
-
                     $player->dominoPool->add($newDomino);
                 } else {
                     $played = true;
