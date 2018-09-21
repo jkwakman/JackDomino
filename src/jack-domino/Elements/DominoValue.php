@@ -43,6 +43,7 @@ final class DominoValue implements DominoValueInterface
      */
     public function __toString(): string
     {
+        
         return (string)$this->value;
     }
 
@@ -53,6 +54,7 @@ final class DominoValue implements DominoValueInterface
      */
     public function getValue(): int
     {
+        
         return $this->value;
     }
 
@@ -63,6 +65,7 @@ final class DominoValue implements DominoValueInterface
      */
     public function isPlayable(): bool
     {
+        
         return $this->playable;
     }
 
@@ -72,6 +75,7 @@ final class DominoValue implements DominoValueInterface
      */
     public function markAsPlayed(): DominoValue
     {
+        
         $this->playable = false;
 
         return $this;
